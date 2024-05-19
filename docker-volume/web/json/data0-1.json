@@ -1,0 +1,14 @@
+[
+    {
+        "icon": "placeholder-icon.png",
+        "name": "Card 1",
+        "description": "This is the description for Card 1.",
+        "link": "https://example.com/card1"
+    },
+    {
+        "icon": "placeholder-icon.png",
+        "name": "Card 2",
+        "description": "This is the description for Card 2.",
+        "link": "https://example.com/card2"
+    }
+]

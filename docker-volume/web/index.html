@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Linkarium</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Add your card styling here */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            transform: scale(1.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px; /* Adjust as needed */
+        }
+
+        /* Title styles */
+        #title {
+            position: absolute;
+            top: 10px;
+            left: 70px; /* Adjust the left position based on your logo size */
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #image-container {
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+            overflow: hidden;
+        }
+        #rotator {
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="images/marky-logo-transp.png" alt="Logo">
+    <h1 id="title">Linkarium</h1>
+    <div id="cards-container"></div>
+
+    <script>
+        // Fetch data from data.json (you can use AJAX or fetch API)
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const cardsContainer = document.getElementById('cards-container');
+
+                // Loop through the data and create cards
+                data.forEach(cardData => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    // Icon
+                    const icon = document.createElement('img');
+                    icon.src = cardData.icon;
+                    icon.classList.add('icon');
+                    card.appendChild(icon);
+
+                    // Name
+                    const name = document.createElement('h2');
+                    name.innerText = cardData.name;
+                    card.appendChild(name);
+
+                    // Description
+                    const description = document.createElement('p');
+                    description.innerText = cardData.description;
+                    card.appendChild(description);
+
+                    // Link
+                    const link = document.createElement('a');
+                    link.href = cardData.link;
+                    link.target = '_blank'; // Open in a new tab
+                    link.innerText = 'Learn more';
+                    card.appendChild(link);
+
+                    // Add click event to spin the card
+                    card.addEventListener('click', () => {
+                        card.style.transform = 'rotate(360deg)';
+                    });
+
+                    cardsContainer.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
