@@ -1,2 +1,3 @@
-docker-volume/ssl/home.key
+docker-volume/ssl/*.key
 *crt
+
