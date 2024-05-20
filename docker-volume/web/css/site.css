@@ -1,0 +1,111 @@
+#rotator {
+    background: url(/images/bg-gallery/image2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*#image-container {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+}
+#rotator {
+    transition: opacity 1s ease-in-out;
+}*/
+#logodiv {
+    width: 15vmin;
+    max-width: 128px;
+    height: 15vmin;
+    max-height: 128px;
+    float: left;
+    margin: 1vmin;
+}
+#logodiv img {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+#openweathermap-widget-15 {
+    max-width: 300px;
+    max-height: 232px;
+    height: 15vmin;
+    width: 15vmin;
+    float: right;
+    margin: 1vmin;
+    margin-right: 20vmin;
+    margin-bottom: 70px;
+}
+
+.divider {
+    width: 100%;
+    max-height: 10px;
+}
+#dividergif {
+    width: 100%;
+    container: (divider div);
+    height: auto;
+    max-height: 10px;
+}
+.icondiv {
+    width: 15vmin;
+    max-width: 64px;
+    height: 15vmin;
+    max-height: 64px;
+    float: left;
+    margin: 1vmin;
+}
+.icondiv img {
+    max-width: 64px;
+    max-height: 64px;
+}
+.icon {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60vmin;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin: auto;
+    float: left;
+    margin-right: 1vmin;
+    margin-top: 1vmin;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(25px);
+    /*clear: both; /* Add this to prevent cards from floating next to each other */
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: auto; /* Adjust as needed */
+}
+
+/* Title styles */
+#title {
+    position: absolute;
+    top: 10px;
+    left: 130px; /* Adjust the left position based on your logo size */
+    font-size: 20px;
+    font-weight: bold;
+}
+#image-container {
+    width: 100%;
+    /*height: 38vmin; /* Adjust as needed */
+    overflow: hidden;
+}
+#rotator {
+    transition: opacity 1s ease-in-out;
+}

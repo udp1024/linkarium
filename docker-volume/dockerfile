@@ -1,18 +1,18 @@
-# Use the Debian base image
-FROM debian:bullseye
+# Don't Use the nginx latest image for Prod. Specify a version number so that you can control upgrades
+FROM nginx:latest
 
 # Install NGINX
-RUN apt-get update && apt-get install -y nginx
+#RUN apt-get update && apt-get install -y nginx
 
 # Create necessary directories
-RUN mkdir -p /mnt/data/config /mnt/data/ssl /mnt/data/web
+#RUN mkdir -p /mnt/data/config /mnt/data/ssl /mnt/data/web
 
 # Copy NGINX configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY ~/proggy/Linkarium/docker-volume/cofig/nginx.conf /etc/nginx/nginx.conf
 
 # Expose ports (adjust as needed)
-EXPOSE 10080
-EXPOSE 10443
+EXPOSE 80
+EXPOSE 443
 
 # Start NGINX
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,67 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Linkarium</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        /* Add your card styling here */
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 40%;
-            border-radius: 5px;
-            margin: auto;
-            text-align: center;
-            position: relative;
-            cursor: pointer;
-        }
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            transform: scale(1.2);
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-        .container {
-            padding: 2px 16px;
-        }
-
-        .icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        #logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px; /* Adjust as needed */
-        }
-
-        /* Title styles */
-        #title {
-            position: absolute;
-            top: 10px;
-            left: 70px; /* Adjust the left position based on your logo size */
-            font-size: 20px;
-            font-weight: bold;
-        }
-        #image-container {
-            width: 100%;
-            height: 300px; /* Adjust as needed */
-            overflow: hidden;
-        }
-        #rotator {
-            transition: opacity 1s ease-in-out;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css; charset=utf-8" href="css/site.css">
 </head>
-<body>
-    <img id="logo" src="images/marky-logo-transp.png" alt="Logo">
-    <h1 id="title">Linkarium</h1>
-    <div id="cards-container"></div>
+<body id="rotator">
+    <div id="logodiv" >
+        <img id="logo" src="images/marky-logo-transp.png" alt="Logo"></div>
+    <div id="titlediv" >
+    <h1 id="title">Linkarium</h1></div>
 
+    <div id="openweathermap-widget-15"></div>
+    <script>
+        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  
+        window.myWidgetParam.push({id: 15,cityid: '5946768',appid: '132a94cf881faee2dd914bd6e0631f7b',units: 'metric',containerid: 'openweathermap-widget-15',  });  
+        (function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.charset = "utf-8";
+            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(script, s);  
+            })();
+        </script>    
+    <div id="divider"><img id="dividergif" src="images/divider.gif" alt="divider" /></div>
+    <div id="cards-container"></div>
     <script>
         // Fetch data from data.json (you can use AJAX or fetch API)
-        fetch('data.json')
+        fetch('json/data.json')
             .then(response => response.json())
             .then(data => {
                 const cardsContainer = document.getElementById('cards-container');
@@ -72,10 +42,14 @@
                     card.classList.add('card');
 
                     // Icon
+                    const icondiv = document.createElement('div');
+                    icondiv.classList.add('icondiv');
                     const icon = document.createElement('img');
                     icon.src = cardData.icon;
                     icon.classList.add('icon');
-                    card.appendChild(icon);
+                    icon.setAttribute('alt','icon');
+                    icondiv.appendChild(icon)
+                    card.appendChild(icondiv);
 
                     // Name
                     const name = document.createElement('h2');
@@ -91,15 +65,17 @@
                     const link = document.createElement('a');
                     link.href = cardData.link;
                     link.target = '_blank'; // Open in a new tab
-                    link.innerText = 'Learn more';
-                    card.appendChild(link);
+                    //link.innerText = 'Learn more';
+                    //card.appendChild(link);
+                    link.appendChild(card);
 
                     // Add click event to spin the card
-                    card.addEventListener('click', () => {
-                        card.style.transform = 'rotate(360deg)';
-                    });
+                    //card.addEventListener('click', () => {
+                    //    card.style.transform = 'rotate(360deg)';
+                    //});
 
-                    cardsContainer.appendChild(card);
+                    //cardsContainer.appendChild(card);
+                    cardsContainer.appendChild(link);
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
