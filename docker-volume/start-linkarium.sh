@@ -12,12 +12,20 @@
 #     -v ~/proggy/Linkarium/docker-volume/ssl:/etc/nginx/certs/:ro
 #     nginx:1.25.5
 
+# with SSL certificates installed and configured;
+# docker run -it --rm -d \
+#     -p 10080:80 \
+#     -p 10443:443 \
+#     --name Linkarium \
+#     -v ~/proggy/Linkarium/docker-volume/web:/usr/share/nginx/html \
+#     -v ~/proggy/Linkarium/docker-volume/config/linkarium.conf:/etc/nginx/conf.d/linkarium.conf:ro \
+#     -v ~/proggy/Linkarium/docker-volume/ssl:/etc/nginx/certs/:ro \
+#     nginx:1.25.5
+
 docker run -it --rm -d \
     -p 10080:80 \
-    -p 10443:443 \
     --name Linkarium \
     -v ~/proggy/Linkarium/docker-volume/web:/usr/share/nginx/html \
     -v ~/proggy/Linkarium/docker-volume/config/linkarium.conf:/etc/nginx/conf.d/linkarium.conf:ro \
-    -v ~/proggy/Linkarium/docker-volume/ssl:/etc/nginx/certs/:ro \
     nginx:1.25.5
     
