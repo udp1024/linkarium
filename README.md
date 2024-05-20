@@ -63,6 +63,10 @@ cd linkarium
 ./start-linkarium.sh
 ```
 
+### Open Weather Map widget
+Please sign-up for an API key at https://openweathermap.org/api
+plug the key in line-20 of Index.html to enjoy the widget on the home page
+
 ## Usage
 
 To add, remove, or modify tiles, edit the `web/json/data.json` file. Each object in the array should have the following properties:
