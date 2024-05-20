@@ -2,6 +2,10 @@
 
 Linkarium is a simple web application that presents a webpage with tiles for other web applications. Each tile has an icon, name, description, and link, which can be defined in a `data.json` file.
 
+This app may useful to people who want a simple web page to present links to applications of their choice.
+
+tags: Bookmark Dashboard selfHosted Docker Homelab HTML CSS Javascript Python Golang
+
 ## Features
 
 - **Dynamic Tiles**: The tiles are dynamically generated from a `data.json` file. You can easily add, remove, or modify tiles by editing this file.
