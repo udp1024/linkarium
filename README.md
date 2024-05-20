@@ -38,6 +38,27 @@ Linkarium is a simple web application that presents a webpage with tiles for oth
 You may need to adjust the paths i the start-linkarium.sh file to accomodate any differences in your environment.
 Now, you should be able to access Linkerium at `http://your_docker_host:10080`.
 
+## Optional configuration steps;
+### SSL
+1. obtain the certificates you wish to use and add them to the web/ssl directory.
+2. Edit config/linkarium.conf file to update the certificate and key file names.
+
+### Customize ports and IP
+1. Edit the config/linkarium.conf file to modify the ports
+2. Edit the start-linkarium.sh to reflect your changes there
+
+### Stop or Restart the server
+```
+docker stop Linkarium
+```
+note the capital L.
+
+Start the server
+```
+cd linkarium
+./start-linkarium.sh
+```
+
 ## Usage
 
 To add, remove, or modify tiles, edit the `web/json/data.json` file. Each object in the array should have the following properties:
