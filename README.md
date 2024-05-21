@@ -1,4 +1,5 @@
 # linkarium
+<img width="1464" alt="Screenshot 2024-05-20 at 10 52 12 PM" src="https://github.com/udp1024/linkarium/assets/920084/5a75f1fd-4c1f-4fa6-8803-ce71e550c50f">
 
 Linkarium is a simple web application that presents a webpage with tiles for other web applications. Each tile has an icon, name, description, and link, which can be defined in a `data.json` file.
 
