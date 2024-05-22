@@ -1,5 +1,6 @@
 # linkarium
 <img width="1464" alt="Screenshot 2024-05-20 at 10 52 12 PM" src="https://github.com/udp1024/linkarium/assets/920084/ff4c02ab-ef80-4f2a-80dd-fa7c11467a3d">
+Live demo link: https://udp1024.com
 
 Linkarium is a simple web application that presents a webpage with tiles for other web applications. Each tile has an icon, name, description, and link, which can be defined in a `data.json` file.
 
@@ -89,4 +90,9 @@ Here's an example:
     },
     // Add more objects as needed
 ]
+```
+## Installation option 2
+If you operate your own web server or have some other mechanism of serving web pages, you can copy the structure in 'web' directory to the root of web-site. Please make sure to include images, css, and json sub-directories.
+
+Also read the note related to Open Weather Widget, above.
 
