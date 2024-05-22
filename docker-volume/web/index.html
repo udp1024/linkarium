@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
     <title>Linkarium</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+
+    <meta name="title" content="Linkarium">
+    <meta name="description" content="shortcuts to your daily sites">
+    <meta name="keywords" content="bookmark, links, dashboard, start page, home page, home, html5, javascript, json">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Neural Designs Inc.">
 
     <link rel="stylesheet" type="text/css; charset=utf-8" href="css/site.css">
 </head>
 <body id="rotator">
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var resolution = window.screen.width * window.devicePixelRatio;
+            var fontSize;
+        
+            if (resolution <= 720) {
+                fontSize = '16px'; // for low resolution displays
+            } else if (resolution <= 1080) {
+                fontSize = '18px'; // for medium resolution displays
+            } else {
+                fontSize = '20px'; // for high resolution displays
+            }
+        
+            document.body.style.fontSize = fontSize;
+        });
+    </script>
     <div id="logodiv" >
         <img id="logo" src="images/marky-logo-transp.png" alt="Logo"></div>
     <div id="titlediv" >
@@ -79,6 +102,34 @@
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <footer class="footer">
+        <!-- Your footer content goes here -->
+        <p id='privacy_link'>Important <a href="/privacy.html">privacy disclosures</a>. By visiting this site, you consent to collection of data as described in the privacy disclosure and other documents linked therein.</p>
+        <p id='copyrights_statement'>Copyright &copy; 2024 <a href="https://neuraldesigns.ca">Neural Designs Inc.</a>. All rights reserved.</p>
+    </footer>
+        <script>
+        function stickFooter() {
+            var footer = document.querySelector('.footer');
+            var bodyHeight = document.body.offsetHeight;
+            var footerHeight = footer.offsetHeight;
+            var viewportHeight = window.innerHeight;
+            var viewportWidth = window.innerWidth - 20;
+        
+            if (bodyHeight + footerHeight < viewportHeight) {
+                footer.style.position = 'fixed';
+                footer.style.bottom = '0';
+            } else {
+                footer.style.position = 'relative';
+            }
+            // Right align the text in the footer
+            footer.style.textAlign = 'right';
+            // Set the width of the footer to the width of the viewport
+            footer.style.width = viewportWidth + 'px';
+        }
+    
+        window.addEventListener('load', stickFooter);
+        window.addEventListener('resize', stickFooter);
     </script>
 </body>
 </html>

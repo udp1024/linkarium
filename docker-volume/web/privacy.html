@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Linkarium Privacy Statement</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Linkarium Privacy Statement">
+    <meta name="description" content="shortcuts to your daily sites">
+    <meta name="keywords" content="bookmark, links, dashboard, start page, home page, home, html5, javascript, json">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Neural Designs Inc.">
+    
+    <link rel="stylesheet" type="text/css; charset=utf-8" href="css/site.css">
+</head>
+<body id="rotator">
+    <div id="logodiv" ><img id="logo" src="images/marky-logo-transp.png" alt="Logo"></div>
+    <div id="titlediv" ><h1 id="title">Linkarium</h1></div>
+    <div id="divider"><img id="dividergif" src="images/divider.gif" alt="divider" /></div>
+    <div class="static_text">
+    <div class="verbiage" id="page_headline"><h2>
+            Privacy and your Personal Information</h2></div>
+    <div class="verbiage" id="privacy_statement">
+        <p>We improve our products and advertising by using Microsoft Clarity and Google Analytics to see how you use our website. By using our site, you agree that we, Google and Microsoft can collect and use this data.</p>
+        <p>We partner with Microsoft Clarity, Google Analytics, Google and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services. Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising. </p>
+        <p>For more information about how Microsoft and Google collect and use your data, visit the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a> and similar <a href="https://support.google.com/analytics/answer/7318509?hl=en">disclosure from Google</a>.
+        <p>By using this site, you consent to collection of usage data as well as other information described by Microsoft nad Google in respective their statements linked above.</p></div>
+    </div>
+    <footer class="footer">
+        <!-- Your footer content goes here -->
+        <p>Copyright &copy; 2024 <a href="https://neuraldesigns.ca">Neural Designs Inc.</a>. All rights reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var resolution = window.screen.width * window.devicePixelRatio;
+            var fontSize;
+        
+            if (resolution <= 720) {
+                fontSize = '16px'; // for low resolution displays
+            } else if (resolution <= 1080) {
+                fontSize = '18px'; // for medium resolution displays
+            } else {
+                fontSize = '20px'; // for high resolution displays
+            }
+        
+            document.body.style.fontSize = fontSize;
+        });
+    </script>
+    <script>
+        function stickFooter() {
+            var footer = document.querySelector('.footer');
+            var bodyHeight = document.body.offsetHeight;
+            var footerHeight = footer.offsetHeight;
+            var viewportHeight = window.innerHeight;
+            var viewportWidth = window.innerWidth - 20;
+        
+            if (bodyHeight + footerHeight < viewportHeight) {
+                footer.style.position = 'fixed';
+                footer.style.bottom = '0';
+            } else {
+                footer.style.position = 'relative';
+            }
+            // Right align the text in the footer
+            footer.style.textAlign = 'right';
+            // Set the width of the footer to the width of the viewport
+            footer.style.width = viewportWidth + 'px';
+        }
+    
+        window.addEventListener('load', stickFooter);
+        window.addEventListener('resize', stickFooter);
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var contentDiv = document.querySelector('.static_text');
+            var viewportWidth = window.innerWidth;
+        
+            // Set the width of the content div to the width of the viewport minus 40 pixels (20px on each side)
+            contentDiv.style.width = (viewportWidth - 60) + 'px';
+        
+            // Align the text in the content div to the left
+            contentDiv.style.textAlign = 'left';
+        
+            // Add padding to the left and right of the content div to create a 20px gap on each side
+            contentDiv.style.paddingLeft = '20px';
+            contentDiv.style.paddingRight = '20px';
+        });
+        
+        window.addEventListener('resize', (event) => {
+            var contentDiv = document.querySelector('.content');
+            var viewportWidth = window.innerWidth;
+        
+            // Update the width of the content div when the window is resized
+            contentDiv.style.width = (viewportWidth - 40) + 'px';
+        });
+    </script>
+</body>
+</html>

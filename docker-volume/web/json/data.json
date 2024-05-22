@@ -1,5 +1,41 @@
 [
     {
+        "icon": "images/whatsapp-transp.png",
+        "name": "Whats App",
+        "description": "messaging",
+        "link": "https://web.whatsapp.com"
+    },
+    {
+        "icon": "images/gmail-02.png",
+        "name": "Gmail",
+        "description": "email by Google",
+        "link": "https://gmail.com"
+    },
+    {
+        "icon": "images/microsoft_365-logo.png",
+        "name": "Microsoft Office 365",
+        "description": "Office on the web",
+        "link": "https://office.com"
+    },
+    {
+        "icon": "images/linkedin-transp.png",
+        "name": "LinkedIn",
+        "description": "Professional Social Network",
+        "link": "https://linkedin.com"
+    },
+    {
+        "icon": "images/google_drive.png",
+        "name": "Google Drive",
+        "description": "Google Drive Storage",
+        "link": "https://drive.google.com"
+    },
+    {
+        "icon": "images/onedrive.png",
+        "name": "OneDrive",
+        "description": "Microsoft OneDrive Storage",
+        "link": "https://onedrive.live.com"
+    },
+    {
         "icon": "images/marky-logo-transp.png",
         "name": "Linkarium Repo",
         "description": "Repository of the source code",

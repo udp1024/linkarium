@@ -11,6 +11,9 @@
 #rotator {
     transition: opacity 1s ease-in-out;
 }*/
+.footer {
+    font-size: 60%;
+}
 #logodiv {
     width: 15vmin;
     max-width: 128px;
@@ -66,7 +69,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 60vmin;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     border-radius: 5px;
     margin: auto;
@@ -98,7 +101,7 @@
     position: absolute;
     top: 10px;
     left: 130px; /* Adjust the left position based on your logo size */
-    font-size: 20px;
+    /*font-size: 20px;*/
     font-weight: bold;
 }
 #image-container {
@@ -108,4 +111,21 @@
 }
 #rotator {
     transition: opacity 1s ease-in-out;
+}
+.static_text {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(25px);
+}
+#page_headline {
+    text-align: center;
+}
+.verbiage {
+    /* define font, size, weight in this class 
+    font-size: 10px;*/
+    font-weight: regular;
+}
+#privacy_statement {
+    text-align: left;
 }
