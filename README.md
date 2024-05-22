@@ -91,7 +91,7 @@ Here's an example:
     },
     // Add more objects as needed
 ]
-
+```
 ## Installation option 2
 If you operate your own web server or have some other mechanism of serving web pages, you can copy the structure in 'web' directory to the root of web-site. Please make sure to include images, css, and json sub-directories.
 
