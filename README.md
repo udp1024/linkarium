@@ -1,6 +1,8 @@
 # linkarium
 <img width="1464" alt="Screenshot 2024-05-20 at 10 52 12 PM" src="https://github.com/udp1024/linkarium/assets/920084/5a75f1fd-4c1f-4fa6-8803-ce71e550c50f">
 
+Live Demo: https://udp1024.com
+
 Linkarium is a simple web application that presents a webpage with tiles for other web applications. Each tile has an icon, name, description, and link, which can be defined in a `data.json` file.
 
 This app may useful to people who want a simple web page to present links to applications of their choice.
@@ -12,7 +14,7 @@ tags: Bookmark Dashboard selfHosted Docker Homelab HTML CSS Javascript Python Go
 - **Dynamic Tiles**: The tiles are dynamically generated from a `data.json` file. You can easily add, remove, or modify tiles by editing this file.
 - **Simple and Lightweight**: Linkerium is designed to be simple and lightweight, making it easy to deploy and fast to load.
 
-## Installation
+## Installation option 1
 
 1. SSH to your Docker host and navigate to your project directory:
 
@@ -90,3 +92,7 @@ Here's an example:
     // Add more objects as needed
 ]
 
+## Installation option 2
+If you operate your own web server or have some other mechanism of serving web pages, you can copy the structure in 'web' directory to the root of web-site. Please make sure to include images, css, and json sub-directories.
+
+Also read the note related to Open Weather Widget, above.
