@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    background-color: #3ab6bf;
+    text-decoration: none;
+    color: white;
+    border-radius: .25rem;
+    display: inline-block;
+    padding: .1em .4em;
+    margin-left: .5em;
+}
+
+main.wrapper {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* HEADER */
+.hero {
+    background: linear-gradient(#3ab6bf5e, #1a5271c7), url('../images/hero.jpg') no-repeat top right;
+    background-size: cover;
+    color: #fff;
+    padding: 2rem;    
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #1a5271;
+    margin-right: 30px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 200;
+    text-shadow: 2px 2px 5px #1a5271;
+}
+
+.hero a {
+    font-size: 1rem;
+}
+
+
+/* STORIES */
+.stories {
+    padding: 2rem;
+}
+
+.stories article {
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+}
+
+.stories figure {
+
+}
+
+.stories img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.stories figcaption {
+   background-color: rgba(0,0,0,.7);
+   width: 100%;
+}
+
+.stories figcaption h3 {
+   color: white;
+   padding: .75rem;
+   font-size: 1.25rem;
+}
+
+.stories p {
+   font-size: 1rem;
+   line-height: 1.5;
+   padding: 1rem .75rem;
+   color: #666666;
+}
+
+/* FOOTER */
+footer {
+   background-color: #333;
+   padding: .75rem;
+   color: white;
+   text-align: center;
+   font-size: .75rem;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (min-width: 800px) {
+    .hero {
+        background-position: center center;
+        padding: 4em 2em;
+    }
+    
+    .hero h1 {
+        text-align: right;
+        max-width: 50%;
+        margin-left: auto;
+    }
+    
+    .hero p {
+
+    }
+    
+    .stories {
+
+    }
+
+}
+

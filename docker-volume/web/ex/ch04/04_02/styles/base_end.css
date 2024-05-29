@@ -1,0 +1,180 @@
+/*
+
+TABLE OF CONTENTS
+
+  1. Global styles
+  2. Hero
+  3. Navigation
+  4. Trips
+  5. CTA
+  6. Team
+  7. Problem
+    7a. Actions
+  8. Gallery
+  9. Footer
+    9a. Contact
+    9b. Connect
+  10. Media Queries
+    10a. Media Query, (min-width: 700px)
+      10a-i. hero
+    10b. Media Query, (min-width: 1000px)
+
+*/
+
+/* ############ 1. Global Styles ############ */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 100%;
+ }
+
+ body > * {
+   font-family: 'Lato', sans-serif;
+   line-height: 1.4;
+ }
+
+ img {
+   max-width: 100%;
+   height: auto;
+ }
+
+ h1, h2, h3, h4 {
+   font-family: 'Nunito', sans-serif;
+   line-height: 1;
+ }
+
+ h1 {
+   font-size: 2.5rem;
+ }
+
+ h2 {
+   font-size: 2rem;
+ }
+
+ h3 {
+   font-size: 1.6rem;
+ }
+
+ h4 {
+   font-size: 1.4rem;
+ }
+
+ p {
+   line-height: 1.4;
+ }
+
+a {
+  color: #36bae6;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #e06630;
+}
+
+i {
+  padding-left: .5rem;
+}
+
+/* ############ 2. Hero ############ */
+.hero {
+  background: url("../images/header1_sm.jpg") no-repeat center right;
+  background-size: cover;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 10px 2fr 10px;
+  grid-template-rows: .5fr 1fr 20px;
+  grid-gap: 20px;
+ }
+
+.hero img {
+  margin: auto;
+  padding-top: 1rem;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.hero article {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.hero button {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  color: #2abadf;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin: .75rem auto 0;
+}
+
+
+/* ############ 3. Navigation ############ */
+
+
+/* ############ 4. Trips ############ */
+
+
+/* ############ 5. CTA ############ */
+
+
+/* ############ 6. Team ############ */
+
+
+/* ############ 7. Problem ############ */
+
+/* ############ 7a. Problem > Action ############ */
+
+
+/* ############ 8. Gallery ############ */
+
+
+/* ######### 9. Footer ######### */
+
+/* ######### 9a. Footer > Contact ######### */
+
+/* ######### 9b. Footer > Connect ######### */
+
+
+/* ############ 10. Media Queries ############ */
+
+/* ############ 10a. Media Query, (min-width: 700px) ############ */
+@media screen and (min-width: 700px) {
+  /* ######### 10a-i. HERO, Large screen rules ######### */
+  header.hero {
+    background: url(../images/header1_lg.jpg) no-repeat center left;
+    background-size: cover;
+    text-align: left;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .25fr 1fr .25fr;
+    align-items: center;
+  }
+
+  .hero img {
+    margin: 0 0 0 auto;
+    grid-row: 2 / 3;
+  }
+
+  .hero article {
+   max-width: 1000px;
+   grid-column: 3 / 6;
+  }
+
+}
+/* ############ 10b. Media Query, (min-width: 1000px) ############ */
+@media screen and (min-width: 1000px) {
+
+}

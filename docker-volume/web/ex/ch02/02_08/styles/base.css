@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header, aside, footer {
+    padding: 1rem;
+}
+
+header {
+    background-color: #3ab397;
+    font-size: 3rem;
+}
+
+aside {
+    background-color: #95d5cf;
+}
+
+main {
+    margin: 1em 0;
+}
+
+article {
+    border: solid 1px #247e9d;
+    text-align: center;
+}
+
+footer {
+    background-color: #247e9d;
+}
+
+/* complete */
+
+header { grid-area: header; }
+aside { grid-area: aside; }
+main { 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+}
+
+article {
+    display: grid;
+    align-items: center;/* vertically center items */
+    justify-content: center; /* horizontally center items */
+}
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+article:nth-of-type(3) {
+    grid-column: 1 / -1;
+}
+
+@media screen and (min-width:800px) {
+    .container {
+        grid-template-areas: 
+            "header header header header"
+            ". aside main ."
+            "footer footer footer footer";
+    }
+    aside {
+      margin-right: 1em;  
+    }
+    
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    article:nth-of-type(3) {
+        grid-column: auto;
+    }
+
+}
